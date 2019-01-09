@@ -3,8 +3,10 @@ package com.kcsj.wzcl.mapper;
 import com.kcsj.wzcl.bean.Vehicle;
 import com.kcsj.wzcl.bean.VehicleExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface VehicleMapper {
     int countByExample(VehicleExample example);
 
