@@ -4,6 +4,7 @@ public class Admin {
     private String adminName;
 
     private String password;
+
     private String type;
 
     private String userName;
