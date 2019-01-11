@@ -21,7 +21,13 @@ public class Message {
     private String area;
     private String type;
     private String plate;
+    /*
+    本次为第几次
+     */
     private int count;
+    /*
+        是否被禁止
+     */
     private boolean ban;
 
     public Message() {

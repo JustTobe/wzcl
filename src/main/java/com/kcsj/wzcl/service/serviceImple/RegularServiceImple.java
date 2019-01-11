@@ -5,11 +5,11 @@ import com.kcsj.wzcl.bean.RegularExample;
 import com.kcsj.wzcl.mapper.RegularMapper;
 import com.kcsj.wzcl.service.RegularService;
 import com.kcsj.wzcl.utils.Result;
-import org.apache.naming.factory.ResourceLinkFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Service
@@ -27,13 +27,12 @@ public class RegularServiceImple implements RegularService {
         criteria.andCodeLike(code + "%");
         List<Regular> regulars = regularMapper.selectByExample(regularExample);
         int temp = 0;
-        if(regulars!=null) {
+        if (regulars != null) {
             for (Regular r : regulars) {
+                String str = r.getCode().substring(code.length() + 1);
 
-                String str = r.getCode().substring(code.length()+1);
-                System.out.println(str);
                 temp = temp < Integer.valueOf(str) ? Integer.valueOf(str) : temp;
-                System.out.println(temp);
+
             }
         }
         temp++;
@@ -48,6 +47,14 @@ public class RegularServiceImple implements RegularService {
     @Override
     public Result getAll() {
         List<Regular> regulars = regularMapper.selectByExample(null);
+        for(Regular regular : regulars){
+            String code =regular.getCode();
+            if(code.startsWith("0-")){
+                code = code.substring(2);
+                regular.setCode(code);
+            }
+
+        }
         return Result.add(regulars);
     }
 

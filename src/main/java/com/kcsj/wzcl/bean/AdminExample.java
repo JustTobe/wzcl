@@ -7,6 +7,7 @@ public class AdminExample {
     protected String orderByClause;
 
     protected boolean distinct;
+
     protected List<Criteria> oredCriteria;
 
     public AdminExample() {

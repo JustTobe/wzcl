@@ -1,18 +1,17 @@
 package com.kcsj.wzcl.bean;
 
-import java.util.Date;
-
 public class Violation {
     private Integer id;
 
     private String plate;
+
     private String area;
 
     private String type;
 
     private String status;
 
-    private Date date;
+    private Long date;
 
     private String vioPic;
 
@@ -20,7 +19,7 @@ public class Violation {
 
     private Integer userId;
 
-    public Violation(Integer id, String plate, String area, String type, String status, Date date, String vioPic, String platePic, Integer userId) {
+    public Violation(Integer id, String plate, String area, String type, String status, Long date, String vioPic, String platePic, Integer userId) {
         this.id = id;
         this.plate = plate;
         this.area = area;
@@ -76,11 +75,11 @@ public class Violation {
         this.status = status == null ? null : status.trim();
     }
 
-    public Date getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Long date) {
         this.date = date;
     }
 

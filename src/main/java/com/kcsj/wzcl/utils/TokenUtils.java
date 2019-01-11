@@ -51,7 +51,12 @@ public class TokenUtils {
 
     public static boolean checkJWT(String anth) {
         Claims claims = parseJWT(anth);
+
         return claims != null;
+    }
+    public static String getUser(String anth){
+        Claims claims = parseJWT(anth);
+        return (String)claims.get("usrename");
     }
 
 }

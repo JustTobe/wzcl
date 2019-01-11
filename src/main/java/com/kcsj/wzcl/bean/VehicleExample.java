@@ -25,6 +25,7 @@ public class VehicleExample {
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
     }
+
     public boolean isDistinct() {
         return distinct;
     }

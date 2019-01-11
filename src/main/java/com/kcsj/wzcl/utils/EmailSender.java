@@ -7,12 +7,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 public class EmailSender {
-
+    @Autowired
     private JavaMailSenderImpl mailSender;
-
-    public EmailSender() {
-        mailSender = new JavaMailSenderImpl();
-    }
 
     @Value("${spring.mail.username}")
     private  String Sender; //读取配置文件中的参数
@@ -41,7 +37,7 @@ public class EmailSender {
         if(message.isBan()){
             str ="请您遵守校园行车规定。";
         }else {
-            str ="您已被禁止进入电子科技大学校园内。";
+            str ="您已禁止进入电子科技大学校园内。";
         }
         String content ="尊敬的"+message.getName()+message.getIndentity()+":"
                 +"\n\t\t"+"您好，"

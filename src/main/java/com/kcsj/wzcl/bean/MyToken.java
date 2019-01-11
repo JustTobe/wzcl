@@ -12,14 +12,22 @@ public class MyToken {
     /**
      * 过期时间
      */
-    private String expireTime;
+    private String token;
+    private String id;
     public MyToken() {
     }
 
-    public MyToken(String role, String username, String expireTime) {
+    public MyToken(String role, String username ) {
         this.role = role;
         this.username = username;
-        this.expireTime = expireTime;
+
+    }
+
+    public MyToken(String role, String username, String token, String id) {
+        this.role = role;
+        this.username = username;
+        this.token = token;
+        this.id = id;
     }
 
     public String getRole() {
@@ -38,11 +46,19 @@ public class MyToken {
         this.username = username;
     }
 
-    public String getExpireTime() {
-        return expireTime;
+    public String getToken() {
+        return token;
     }
 
-    public void setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

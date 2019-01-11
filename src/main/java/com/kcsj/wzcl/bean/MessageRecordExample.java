@@ -1,11 +1,11 @@
 package com.kcsj.wzcl.bean;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class MessageRecordExample {
     protected String orderByClause;
+
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
@@ -244,52 +244,52 @@ public class MessageRecordExample {
             return (Criteria) this;
         }
 
-        public Criteria andDateEqualTo(Date value) {
+        public Criteria andDateEqualTo(Long value) {
             addCriterion("date =", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateNotEqualTo(Date value) {
+        public Criteria andDateNotEqualTo(Long value) {
             addCriterion("date <>", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateGreaterThan(Date value) {
+        public Criteria andDateGreaterThan(Long value) {
             addCriterion("date >", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateGreaterThanOrEqualTo(Date value) {
+        public Criteria andDateGreaterThanOrEqualTo(Long value) {
             addCriterion("date >=", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateLessThan(Date value) {
+        public Criteria andDateLessThan(Long value) {
             addCriterion("date <", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateLessThanOrEqualTo(Date value) {
+        public Criteria andDateLessThanOrEqualTo(Long value) {
             addCriterion("date <=", value, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateIn(List<Date> values) {
+        public Criteria andDateIn(List<Long> values) {
             addCriterion("date in", values, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateNotIn(List<Date> values) {
+        public Criteria andDateNotIn(List<Long> values) {
             addCriterion("date not in", values, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateBetween(Date value1, Date value2) {
+        public Criteria andDateBetween(Long value1, Long value2) {
             addCriterion("date between", value1, value2, "date");
             return (Criteria) this;
         }
 
-        public Criteria andDateNotBetween(Date value1, Date value2) {
+        public Criteria andDateNotBetween(Long value1, Long value2) {
             addCriterion("date not between", value1, value2, "date");
             return (Criteria) this;
         }
