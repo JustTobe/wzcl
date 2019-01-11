@@ -1,4 +1,4 @@
-package com.kcsj.wzcl.service;
+package com.kcsj.wzcl.service.serviceImple;
 
 import com.kcsj.wzcl.bean.Vehicle;
 import com.kcsj.wzcl.bean.VehicleExample;
@@ -24,16 +24,11 @@ public class VehicleService{
         List<Vehicle> vehicles= vehicleMapper.selectByExample(ve);
         //System.out.println(vehicles.isEmpty()+"\n\n");
 
-
         if(vehicles.isEmpty())
         {
             return Result.Fail();      }
 
-        Result result=new Result();
-        result.setStatusCode(200);
-        result.setData(vehicles);
-        result.setDescription("test");
-        return result;
+        return Result.add(vehicles);
     }
 
     public Result getAll()
@@ -41,11 +36,10 @@ public class VehicleService{
         VehicleExample ve=new VehicleExample();
         ve.or().andIdGreaterThan(0);
         List<Vehicle> vehicles=vehicleMapper.selectByExample(ve);
+        if(vehicles.isEmpty())
+            return Result.Fail();
 
-        Result result=new Result();
-        result.setStatusCode(200);
-        result.setData(vehicles);
-        return result;
+        return Result.add(vehicles);
     }
 
     public Result add(Vehicle vehicle)

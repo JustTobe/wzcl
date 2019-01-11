@@ -107,7 +107,7 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
-    <insert id="insert" parameterType="com.kcsj.wzcl.bean.Violation">
+    <insert id="insert" parameterType="com.kcsj.wzcl.bean.Violation" useGeneratedKeys="true" keyProperty="id">
     insert into violation (id, plate, area, 
       type, status, date, vio_pic, 
       plate_pic, user_id)

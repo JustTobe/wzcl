@@ -103,7 +103,7 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
-    <insert id="insert" parameterType="com.kcsj.wzcl.bean.Operation">
+    <insert id="insert" parameterType="com.kcsj.wzcl.bean.Operation" useGeneratedKeys="true" keyProperty="id">
     insert into operation (id, vio_id, admin_name, 
       content, description)
     values (#{id,jdbcType=INTEGER}, #{vioId,jdbcType=INTEGER}, #{adminName,jdbcType=VARCHAR}, 

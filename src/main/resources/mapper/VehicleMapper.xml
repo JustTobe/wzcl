@@ -106,7 +106,7 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
-    <insert id="insert" parameterType="com.kcsj.wzcl.bean.Vehicle">
+    <insert id="insert" parameterType="com.kcsj.wzcl.bean.Vehicle" useGeneratedKeys="true" keyProperty="id">
     insert into vehicle (id, plate, name, 
       phone, email, identity_type, 
       grade, count)
