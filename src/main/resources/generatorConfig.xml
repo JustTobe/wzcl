@@ -65,18 +65,6 @@
                              targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-
-
-        <table tableName="admin" domainObjectName="Admin">
-
-        </table>
-        <table tableName="operation" domainObjectName="Operation"></table>
-        <table tableName="message" domainObjectName="MessageRecord"></table>
-        <table tableName="regular" domainObjectName="Regular"></table>
-        <table tableName="vehicle" domainObjectName="Vehicle"></table>
-        <table tableName="violation" domainObjectName="Violation"></table>
-
-
+    <table tableName="vehicle" domainObjectName="Vehicle"> </table>
     </context>
 </generatorConfiguration>
-

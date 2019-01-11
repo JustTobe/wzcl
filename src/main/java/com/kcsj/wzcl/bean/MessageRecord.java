@@ -1,18 +1,17 @@
 package com.kcsj.wzcl.bean;
 
-import java.util.Date;
-
 public class MessageRecord {
     private Integer id;
+
     private String email;
 
-    private Date date;
+    private Long date;
 
     private Integer violationId;
 
     private String content;
 
-    public MessageRecord(Integer id, String email, Date date, Integer violationId, String content) {
+    public MessageRecord(Integer id, String email, Long date, Integer violationId, String content) {
         this.id = id;
         this.email = email;
         this.date = date;
@@ -40,11 +39,11 @@ public class MessageRecord {
         this.email = email == null ? null : email.trim();
     }
 
-    public Date getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Long date) {
         this.date = date;
     }
 

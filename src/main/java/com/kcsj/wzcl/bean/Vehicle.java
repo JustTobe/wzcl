@@ -10,6 +10,7 @@ public class Vehicle {
     private String phone;
 
     private String email;
+
     private String identityType;
 
     private Integer grade;

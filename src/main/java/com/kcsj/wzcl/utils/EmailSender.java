@@ -5,10 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EmailSender {
+
     @Autowired
     private JavaMailSenderImpl mailSender;
+
+    public EmailSender() {
+    }
 
     @Value("${spring.mail.username}")
     private  String Sender; //读取配置文件中的参数
@@ -17,8 +23,8 @@ public class EmailSender {
         mailMessage.setFrom(Sender);
         mailMessage.setTo(sendTo);
         mailMessage.setSubject("电子科技大学车辆违章提醒");
-        String content =combineContent(message);
-        mailMessage.setText(content);
+       // String content =combineContent(message);
+        mailMessage.setText("11");
         mailSender.send(mailMessage);
 
     }
